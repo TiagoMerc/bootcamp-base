@@ -1,5 +1,6 @@
 using Tarefas.DTO;
-
+namespace Tarefas.DAO
+{
 public interface ITarefaDAO
     {
         void Atualizar(TarefaDTO tarefa);
@@ -8,3 +9,4 @@ public interface ITarefaDAO
         void Criar(TarefaDTO tarefa);
         void Excluir(int id);
     }
+}

@@ -37,7 +37,7 @@ namespace Tarefas.DAO
             }
         }
 
-        public void Criar(TarefaDTO tarefa)
+        public void Criar(TarefaDTO tarefaViewModel)
         {
             using (var con = Connection)
             {
@@ -45,7 +45,7 @@ namespace Tarefas.DAO
                 con.Execute(
                     @"INSERT INTO Tarefa
                     (Titulo, Descricao, Concluida) VALUES
-                    (@Titulo, @Descricao, @Concluida);", tarefa
+                    (@Titulo, @Descricao, @Concluida);", tarefaViewModel
                 );
             }
         }
